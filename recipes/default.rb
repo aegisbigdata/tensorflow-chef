@@ -289,6 +289,11 @@ for python in python_versions
        exit 12
     fi
 
+    yes | ${CONDA_DIR}/envs/${PROJECT}/bin/pip install --upgrade requests
+    if [ $? -ne 0 ] ; then
+       exit 13
+    fi
+
     EOF
   end
 
