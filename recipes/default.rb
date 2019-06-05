@@ -214,6 +214,13 @@ for python in python_versions
     yes | ${CONDA_DIR}/envs/${PROJECT}/bin/pip install --upgrade pip
 
     yes | ${CONDA_DIR}/envs/${PROJECT}/bin/pip install --upgrade requests
+
+    yes | ${CONDA_DIR}/envs/${PROJECT}/bin/pip install --upgrade folium
+
+    yes | ${CONDA_DIR}/envs/${PROJECT}/bin/pip install --upgrade termcolor
+
+    yes | ${CONDA_DIR}/envs/${PROJECT}/bin/pip install --upgrade python-highcharts
+
     if [ $? -ne 0 ] ; then
        exit 3
     fi
